@@ -2,29 +2,107 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <!-- <link rel='stylesheet' href='/stylesheets/index.css' /> -->
+    <link rel='stylesheet' href='/lib/bootstrap-material-design/dist/css/material-fullpalette.css' />
+    
+    <link rel='stylesheet' href='/lib/bootstrap-material-design/dist/css/material.css' />
+ 
+    <link rel='stylesheet' href='/lib/bootstrap-material-design/dist/css/ripples.css' />
+ 
+    <link rel='stylesheet' href='/lib/bootstrap-material-design/dist/css/roboto.css' />
+
+    <link rel='stylesheet' href='/lib/noUiSlider.8.0.2/nouislider.css' />
+
+    <link rel='stylesheet' href='/stylesheets/my.css' />
+
+    <script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script>
+
   </head>
-  <body>
-    <header>
-        <h1><%= title %></h1>
-        <ul class="type" id="type">
-            <li data-type="dot">Dot</li>
-            <li data-type="column" class="selected">Column</li>
-        </ul>
-        <p>
-            volume <input id="volume" type="range" min="0" max="100" value="60">
-        </p>
-    </header>
-    <div class="left">
-        <ul id="list">
-            <% music.forEach(function(name){ %>
-                <li title="<%= name %>"><%= name %></li>
-            <%   })%>
+  <body style="background:#ECEFF1">
+    
+   
+        <div style="background:#f5f5f5; text-align:center; font-size:200%" class="top jumbotron" >
+            <h1 style="background:#f5f5f5; text-align:center;">
+            <span style="color:#F44336;">M</span>
+            <span style="color:#E91E63;">U</span>
+            <span style="color:#2196F3;">S</span>
+            <span style="color:#00BCD4;">I</span>
+            <span style="color:#FFEB3B;">C</span>
+            </h1>
+            <h1 style="text-align:center;">
+                <div class="icon-preview"><i class="mdi-action-invert-colors"></i></div>
+            </h1>
+            <h1 style="text-align:center;">
+                 
+                <span style="color:#80DEEA;">V</span>
+                <span style="color:#ffffff;">I</span>
+                <span style="color:#80DEEA;">S</span>
+                <span style="color:#ffffff;">U</span>
+                <span style="color:#80DEEA;">A</span>
+                <span style="color:#ffffff;">L</span>
+                <span style="color:#80DEEA;">I</span>
+                <span style="color:#ffffff;">S</span>
+                <span style="color:#80DEEA;">A</span>
+                <span style="color:#ffffff;">T</span>
+                <span style="color:#80DEEA;">I</span>
+                <span style="color:#ffffff;">O</span>
+                <span style="color:#80DEEA;">N</span>
+
+                
+            </h1>
+
+        </div>
+        
+        <div class="canvasC"> 
             
-           
-        </ul>
-    </div>
-    <div class="right" id="box"></div>
+                <div class="left jumbotron">
+                    <ul id="list" style="color:#000; font-size:200%">
+                        <% music.forEach(function(name){ %>
+                            <li title="<%= name %>"><%= name %></li>
+                        <%   })%>
+                        
+                       
+                    </ul>
+
+                    <div id="type">
+                    <button data-type="dot" class="btn btn-info btn-raised" style="width:90%">D</button>
+                    <button data-type="column" class="btn btn-info btn-raised"  style="width:90%">H</button>
+                    </div>
+                </div>
+
+
+                
+
+                <div class="right " id="box">
+                    <h3 style="color:#fff; font-size:200%">
+                 &nbsp;Sound
+                 <input id="volume" type="range" min="0" max="100" value="60" style="width:100%">
+                 
+                 <canvas id="canvas" class="canvas"></canvas>
+            </h3>
+                </div>
+            
+        </div>
+        
+        
+        
+    
+    
+    
+
+    
+    
+    
+
+
     <script type="text/javascript" src="/javascripts/index.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap-material-design/dist/js/material.js"></script>
+    <script type="text/javascript" src="/lib/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script type="text/javascript" src="/lib/noUiSlider.8.0.2/nouislider.js"></script>
+    <script type="text/javascript">
+        
+        
+        
+    </script>
   </body>
 </html>

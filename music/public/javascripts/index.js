@@ -43,7 +43,7 @@ var count = 0;
 
 var box = $("#box")[0];
 var height, width;
-var canvas = document.createElement("canvas");
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.globalCompositeOperation = "lighter";
 box.appendChild(canvas);
@@ -123,13 +123,13 @@ function draw(arr){
     }
 }
 draw.type = "column";
-var types = $("#type li");
+var types = $("#type button");
 for (var i = 0; i < types.length; i++) {
     types[i].onclick = function() {
-        for (var j = 0;j<types.length;j++){
-            types[j].className = "";
-        }
-        this.className = "selected";
+        // for (var j = 0;j<types.length;j++){
+        //     types[j].className = "";
+        // }
+        // this.className = "selected";
         draw.type = this.getAttribute("data-type");
     }
 };

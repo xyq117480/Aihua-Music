@@ -1,0 +1,59 @@
+.top{
+    background: #f5f5f5;
+    margin: 0;
+}
+
+.left{
+
+    position: absolute;
+    left: 10px;
+    width: 10%;
+    background: #212121;
+    right: auto;
+    top: 500px;
+    bottom: 1px;
+    
+    border: solid #fff 1px;
+}
+.left ul{
+    overflow: auto;
+}
+.left ul li{
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.left ul li.selected{
+    color: green;
+}
+.right{
+    background-color: #212121;
+    position: absolute;
+    top: 500px;
+    right:10px;
+    bottom:1px;
+    left:20%;
+    border: solid #fff 1px;
+   
+
+}
+
+.canvasC{
+    color:#fff;
+    bottom: 10px;
+    left:auto;
+    right:auto;
+
+    top:10px;
+
+}
+
+.canvas{
+   
+    width: 100%;
+    position: relative;
+    height: 80%;
+    background: #212121;
+
+}
+
